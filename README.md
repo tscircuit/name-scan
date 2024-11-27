@@ -16,4 +16,6 @@ Just because a variable name passes doesn't mean it's good in context, this is j
 ## HTTP API
 
 This service can be used as an API, just do `POST /namecheck/check_diff_for_bad_names` with `{ diff: string }`. You can get
-the diff for any Github pull request by adding ".patch" to the github url at the PR
+the diff for any Github pull request by adding ".patch" to the github url at the PR. The response is `{ name_errors: Array<{ lineNumber: string, variableName: string, message: string, suggestedName: string }> }`
+
+You can also do the simpler `GET /namecheck/check_name?name=&type=` which returns `{ name_is_good: false, name_error: { variableName: string, suggestedName: string, message: string } }`
