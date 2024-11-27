@@ -1,0 +1,3 @@
+bad,type,good,explanation
+onFullScreen,func,onToggleFullScreen,Never have onNoun, always use onVerb
+value,string,,value is too general to the point of being meaningless, pick a more specific name for your context
